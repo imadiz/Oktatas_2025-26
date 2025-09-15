@@ -1,0 +1,25 @@
+body{
+    width: 60%;
+    margin: auto;
+    background-color: #DDFFDD;
+    color: #002200;
+}
+h1{
+    text-align: center;
+}
+h4{
+    text-align: left;
+}
+img{
+    width: 150px;
+}
+.kepek{
+    float: right;
+}
+p{
+    margin-left: 40px;
+}
+.ut{
+    width: 350px;
+    margin: auto
+}
