@@ -1,0 +1,46 @@
+body{
+    background-color: #EEFF66;
+    color: #000066;
+    width: 600px;
+    margin: 0 auto;
+}
+.nagycim{
+    text-align: center;
+    font-style: italic;
+}
+.hetek{
+    display: flex;
+    justify-content:space-between;
+}
+hr{
+    background-color: red;
+    border-color: red;
+}
+.egynap{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.egynap > img{
+    width: 200px;
+}
+.szoveg > h2{
+    margin: 10px;
+}
+.also{
+    display: flex;
+    justify-content: space-between;
+}
+.also > img{
+    width: 160px;
+}
+.ar{
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: 10px;
+}
+.ar > span:nth-child(2){
+    text-align: right;
+}
