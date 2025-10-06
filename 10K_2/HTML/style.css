@@ -29,3 +29,12 @@ ul > p{
     margin: auto;
     width: 350px;
 }
+.kiscim{
+    font-weight: bold;
+}
+.szoveg{
+    margin-left: 40px;
+}
+.csillag{
+    font-size: 40px;
+}
