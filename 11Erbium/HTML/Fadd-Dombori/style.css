@@ -1,4 +1,44 @@
 body{
     background-color: #DDFFFF;
     color: #004400;
+    width: 550px;
+    margin: auto;
+}
+.fcim{
+    font-style: italic;
+}
+.acim{
+    font-style: italic;
+    text-align: right;
+}
+.bcim{
+    font-weight: bold;
+    font-size: 40px;
+}
+.ccim{
+    font-weight: bold;
+    font-size: 32px;
+}
+.kdoboz{
+    margin: auto;
+    border: 3px solid darkgray;
+    background-color: lightgreen;
+    padding: 2px;
+    width: 350px;
+}
+.bdoboz{
+    border: 1px solid gray;
+    background-color: lightgreen;
+}
+.bdoboz > h2{
+    text-align: center;
+}
+.nagylista > li{
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.szallas{
+    margin: auto;
+    padding: 0 25px;
 }
