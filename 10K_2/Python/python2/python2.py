@@ -121,7 +121,14 @@ def paratlanok_kivalogatasa(camambert):
     
     A visszatérési érték None, ha a szám nics benne a listában.
 '''
-
+def kereses_a_listaban(hat,het):
+    index = 0
+    for i in hat:
+        if i == het:
+            return index
+        index += 1
+    
+    return None
 
 
 #--------------------------
@@ -132,6 +139,14 @@ def paratlanok_kivalogatasa(camambert):
     Üres lista esetén 0 a visszatérési érték.
     A feladat megoldása során nem használhatod a sum() függvényt!
 '''
+def osszeg(x):
+    if len(x)== 0:
+        return 0
+    osszeg = 0
+    for i in x:
+        osszeg += i
+    
+    return osszeg
 
 
 
@@ -140,8 +155,20 @@ def paratlanok_kivalogatasa(camambert):
     A faktorialis nevű függvény,
     visszatér a paraméterként megkapott szám faktoriálisával.
 '''
+def faktorialis(mozzarella):
+    if mozzarella < 0:
+        return None
+    
+    if mozzarella == 0:
+        return 1
+    
+    szam = 1
+    osszeg = 1
+    while(szam <= mozzarella):
+        osszeg *= szam
+        szam += 1
 
-
+    return osszeg
 
 #--------------------------
 '''
@@ -150,7 +177,13 @@ def paratlanok_kivalogatasa(camambert):
         amely a paraméterként átadott számokat tartalmazó lista
         páros számait tartalmazza.
 '''
-
+def parosok_kivalogatasa(parmezan):
+    lista = []
+    for i in parmezan:
+        if i % 2 == 0:
+            lista.append(i)
+    
+    return lista
 
 
 #--------------------------
@@ -160,7 +193,14 @@ def paratlanok_kivalogatasa(camambert):
     visszatér a lista számainak átlagával.
 '''
 
+def lista_atlag(x):
+    if len(x) == 0:
+        return 0
+    osszeg = 0
+    for i in x:
+        osszeg += i
 
+    return osszeg / len(x)
 
 #--------------------------
 ''' 
@@ -170,9 +210,14 @@ def paratlanok_kivalogatasa(camambert):
     
     Üres lista esetén 1 a visszatérési érték.
 '''
+#67
+def szorzat(x):
+    osszeg = 1
+    for i in x:
+        osszeg *= i
 
-
-
+    return osszeg 
+#67
 #--------------------------
 ''' 
     A pozitivok_kivalogatasa nevű függvény,
@@ -180,6 +225,17 @@ def paratlanok_kivalogatasa(camambert):
         amely a paraméterként átadott számokat tartalmazó lista
         pozitiv számait tartalmazza. 
 '''
+#67
+def pozitivok_kivalogatasa(x):
+    lista = []
+    for i in x:
+        if i > 0:
+            lista.append(i)
+    
+    return lista
+    
+
+
 
 
 
@@ -192,6 +248,16 @@ def paratlanok_kivalogatasa(camambert):
     A visszatérési érték False, ha  a betü nics benne a stringben.
 '''
 
+def benne_van_a_stringben(x, y):
+    for i in x:
+        if i == y:
+            return True
+    
+    return False
+
+
+
+
 
 
 #--------------------------
@@ -203,6 +269,17 @@ def paratlanok_kivalogatasa(camambert):
     
     A feladat megoldása során nem használhatod a min() függvényt!
 '''
+def legkisebb(x):
+    if len(x) == 0:
+        return None
+    
+    min = x[0]
+    for i in x:
+        if i < min:
+            min = i
+
+    return min
+
 
 
 
@@ -216,7 +293,14 @@ def paratlanok_kivalogatasa(camambert):
     
     A visszatérési érték None, ha a betü nics benne a stringben.
 '''
+def kereses_a_stringben(x,y):
+    index = 0
+    for i in x:
+        if i == y:
+            return index
+        index += 1
 
+    return None
 
 
 #--------------------------
@@ -227,8 +311,16 @@ def paratlanok_kivalogatasa(camambert):
     
     Üres lista esetén 0 a visszatérési érték.
 '''
+def negativok_szama(a):
+    if len(a) == 0:
+        return 0
+    
+    neg = 0
+    for i in a:
+        if i < 0:
+            neg += 1
 
-
+    return neg
 
 #--------------------------
 '''
@@ -241,7 +333,12 @@ def paratlanok_kivalogatasa(camambert):
     Üres lista esetén a visszatérési érték False.
 '''
 
-
+def benne_van_a_listaban(x, y):
+    for i in x:
+        if i == y:
+            return True
+    
+    return False
 
 #--------------------------
 ''' 
@@ -251,6 +348,25 @@ def paratlanok_kivalogatasa(camambert):
     
     Üres lista esetén 0 a visszatérési érték.
 '''
+#67 == 13
+#67 == 41
+
+def pozitivok_szama(neckhurts):
+    if len(neckhurts) == 0:
+        return 0
+    
+    neg = 0
+    for i in neckhurts:
+        if i > 0:
+            neg += 1
+
+    return neg
+    
+
+    
+
+
+
 
 
 
@@ -261,6 +377,13 @@ def paratlanok_kivalogatasa(camambert):
       amely a paraméterként átadott számokat tartalmazó lista
       negatív számait tartalmazza.
 '''
+def negativok_kivalogatasa(djiboutigae):
+    lista = []
+    for i in djiboutigae:
+        if i < 0:
+            lista.append(i)
+    
+    return lista
 
 
 
