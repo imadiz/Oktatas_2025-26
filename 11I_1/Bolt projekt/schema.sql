@@ -19,3 +19,18 @@ CREATE TABLE Employees(
     Position varchar(255),
     Password text
 );
+-- Teszt felhasználó hozzáadása
+INSERT INTO Employees(
+    Employees.ID,
+    Employees.Name,
+    Employees.Wage,
+    Employees.Position
+    Employees.Password
+)
+VALUES(
+    1,
+    "Test Thomas",
+    1500,
+    "TestPos",
+    "14f8f4bb8c0e79a02670a5fea5682da717a5b3d3dc7b1706f7a4bab9afae18c2"
+);
