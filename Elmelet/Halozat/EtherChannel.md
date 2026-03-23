@@ -46,7 +46,26 @@ Ahhoz, hogy az EtherChannel felálljon, a portoknak **egyezniük kell** a követ
 
 ---
 
-## 5. Alapvető konfigurációs parancsok (Példa)
+## 5. Ellenőrző parancsok (Verification)
+
+| Parancs | Funkció |
+| :--- | :--- |
+| `show etherchannel summary` | A legfontosabb státusz-áttekintő parancs. |
+| `show etherchannel port-channel` | Logikai interfész paramétereinek listázása. |
+| `show interface port-channel 1` | Sávszélesség és fizikai státusz megtekintése. |
+| `show etherchannel load-balance` | Aktuális elosztási algoritmus ellenőrzése. |
+| `show lacp neighbor` | LACP szomszéd információk lekérése. |
+
+## 6. Státuszkódok magyarázata (show etherchannel summary)
+
+* **(S)** - Layer 2 (Switched): Kapcsolt hálózatban (VLAN alapú) működik.
+* **(R)** - Layer 3 (Routed): Forgalomirányított (IP alapú) interfészként működik.
+* **(U)** - In Use: A Port-Channel aktív, sávszélességet ad és forgalmat továbbít.
+* **(P)** - In Port-Channel: A fizikai port sikeresen csatlakozott a logikai csatornához.
+* **(I)** - Stand-alone: Hiba! A port nem tudott csatlakozni (gyakran paraméter-eltérés miatt).
+* **(D)** - Down: A port le van állítva (shutdown) vagy nincs fizikai link.
+
+## 7. Alapvető konfigurációs parancsok (Példa)
 
 ### LACP konfiguráció (Interfész szinten)
 ```ios
@@ -56,3 +75,23 @@ Switch(config-if-range)# speed 100
 Switch(config-if-range)# duplex full
 Switch(config-if-range)# channel-group 1 mode active
 Switch(config-if-range)# exit
+```
+
+## 8. Layer 3 (Router / L3 Switch) Konfiguráció
+
+Abban az esetben, ha nem Layer 2-es kapcsolót, hanem IP-címmel ellátott interfészeket akarunk összefogni:
+1. Belépés a fizikai interfészekhez és a switchport funkció kikapcsolása
+
+```ios
+Router(config)# interface range gigabitEthernet 0/0 - 1
+Router(config-if-range)# no switchport
+Router(config-if-range)# channel-group 1 mode active
+Router(config-if-range)# exit
+```
+
+2. IP cím beállítása a logikai Port-Channel interfészen
+```
+Router(config)# interface port-channel 1
+Router(config-if)# ip address 10.1.1.1 255.255.255.252
+Router(config-if)# no shutdown
+```
