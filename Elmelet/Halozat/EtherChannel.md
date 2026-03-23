@@ -28,7 +28,8 @@ Az **EtherChannel** egy port-aggregációs technológia, amely lehetővé teszi 
 | **Ajánlás** | Általánosan javasolt | Csak Cisco eszközöknél | Nem javasolt (hibafelismerés hiánya) |
 
 ### Módok párosítása (Mikor épül fel?)
-* **LACP:** Active + Active = **Igen**
+* **LACP:** 
+    * Active + Active = **Igen**
     * Active + Passive = **Igen**
     * Passive + Passive = **Nem**
 * **PAgP:**
